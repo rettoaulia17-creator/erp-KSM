@@ -1,0 +1,24 @@
+index.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#1b1431">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>NAMA APLIKASI</title>
+<style>html,body{margin:0;height:100%;background:#1b1431}iframe{border:0;width:100%;height:100%}</style>
+</head>
+<body>
+<iframe id="app"></iframe>
+
+<script>
+const EXEC = 'https://script.google.com/macros/s/AKfycbyGLs_NokUCEfXElLTPKOCSES7W2Ja5YZxh3GCCVDeEsazzpK31xiwTqBnrtbQ-hNfa4g/exec';
+document.getElementById('app').src = EXEC;
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>
